@@ -1,14 +1,3 @@
----
-tags: [gradio-custom-component, Chatbot, multi-modal, markdown]
-title: gradio_m3d_chatbot
-short_description: A multi-modal markdown render
-colorFrom: blue
-colorTo: yellow
-sdk: gradio
-pinned: false
-app_file: space.py
----
-
 # `gradio_m3d_chatbot`
 <img alt="Static Badge" src="https://img.shields.io/badge/version%20-%200.0.1%20-%20orange">  
 
@@ -161,6 +150,7 @@ if __name__ == "__main__":
 ## Reference
 
 - [ChatGPT-Next-Web](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+- [MMKG-RAG](https://github.com/wenzhaoabc/mmkg-rag/)
 
 ## License
 
