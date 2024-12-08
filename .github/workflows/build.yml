@@ -46,6 +46,6 @@ jobs:
         owner: ${{ github.repository_owner }}
         repo: ${{ github.repository }}
         files: ./dist/*
-        name: ${{ github.ref }}
+        name: ${{ github.ref_name }}
         body: ${{ github.sha }}
         draft: false
