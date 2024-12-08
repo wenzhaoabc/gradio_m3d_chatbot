@@ -9,6 +9,10 @@ on:
 
 jobs:
   build-and-release:
+    permissions:
+      contents: write
+      packages: write
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -32,13 +36,16 @@ jobs:
 
     - name: Build Gradio Component
       run: |
+        gradio cc install
         gradio cc build --no-generate-docs
 
     - name: Create Github Releases
       uses: softprops/action-gh-release@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
+        owner: ${{ github.repository_owner }}
+        repo: ${{ github.repository }}
         files: ./dist/*
-        release_name: ${{ github.ref }}
+        name: ${{ github.ref }}
         body: ${{ github.sha }}
         draft: false
