@@ -32,6 +32,7 @@ jobs:
 
     - name: Build Gradio Component
       run: |
+        gradio cc install
         gradio cc build --no-generate-docs
 
     - name: Create Github Releases
