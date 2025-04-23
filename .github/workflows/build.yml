@@ -40,6 +40,6 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: ./dist/*
-        release_name: ${{ github.ref.replace('refs/tags/', '') }}
+        release_name: ${{ replace(github.ref, 'refs/tags/', '') }}
         body: ${{ github.sha }}
         draft: false
