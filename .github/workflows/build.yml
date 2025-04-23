@@ -29,7 +29,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install gradio
-        cd frontend && npm install
+        gradio cc install
 
     - name: Build Gradio Component
       run: |
