@@ -1,11 +1,8 @@
 name: Build and Release
 
 on:
-  push:
-    tags:
-      - 'v*'
-    branches:
-      - main
+  release:
+    types: [created]
 
 jobs:
   build-and-release:
